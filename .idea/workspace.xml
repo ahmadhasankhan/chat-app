@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5477c35-99c3-4d26-a1e1-56f7d5dd7d90" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/chat.css" afterPath="$PROJECT_DIR$/public/stylesheets/chat.css" />
     </list>
     <ignored path="chat-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,19 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="chat.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/chat.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="7" selection-start="409" selection-end="409" vertical-scroll-proportion="0.35501355" vertical-offset="107" max-vertical-offset="476">
+            <state line="12" column="9" selection-start="380" selection-end="380" vertical-scroll-proportion="-5.92" vertical-offset="56" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="chat.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/chat.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="9" column="32" selection-start="161" selection-end="161" vertical-scroll-proportion="0.3883249" vertical-offset="0" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -128,13 +128,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/routes/chat.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/chat.css" />
         <option value="$PROJECT_DIR$/public/javascripts/chat.js" />
         <option value="$PROJECT_DIR$/views/chat.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery/jquery-1.7.2.min.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/public/stylesheets/chat.css" />
       </list>
     </option>
   </component>
@@ -467,12 +467,12 @@
       <updated>1393176469747</updated>
       <workItem from="1393176509038" duration="1430000" />
       <workItem from="1393178016575" duration="7967000" />
-      <workItem from="1393204494194" duration="4241000" />
+      <workItem from="1393204494194" duration="5086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13638000" />
+    <option name="totallyTimeSpent" value="14483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="158" y="13" width="1039" height="701" extended-state="0" />
@@ -657,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/chat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="9" selection-start="241" selection-end="241" vertical-scroll-proportion="0.53543305" vertical-offset="0" max-vertical-offset="391">
@@ -673,7 +666,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/chat.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="409" selection-end="409" vertical-scroll-proportion="0.35501355" vertical-offset="107" max-vertical-offset="476">
+        <state line="12" column="9" selection-start="380" selection-end="380" vertical-scroll-proportion="-5.92" vertical-offset="56" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/chat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="32" selection-start="161" selection-end="161" vertical-scroll-proportion="0.3883249" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>

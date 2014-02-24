@@ -3,7 +3,7 @@
     overflow-y: auto;
     overflow-x: none;
     width: 700px;
-    height: 550px;
+    height: 300px;
 }
 
 .shadow {
@@ -12,6 +12,7 @@
     padding-right: 1px;
     padding-bottom: 10px;
     padding-left: 15px;
+
 }
 .allMsg {
 }
