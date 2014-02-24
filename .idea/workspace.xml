@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5477c35-99c3-4d26-a1e1-56f7d5dd7d90" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/jquery/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/public/javascripts/jquery/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,19 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="chat.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/chat.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="327" selection-end="327" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="476">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="225" selection-end="225" vertical-scroll-proportion="0.4314721" vertical-offset="0" max-vertical-offset="394">
+            <state line="14" column="7" selection-start="409" selection-end="409" vertical-scroll-proportion="0.35501355" vertical-offset="107" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -152,7 +140,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
+    <option name="x" value="158" />
     <option name="y" value="13" />
     <option name="width" value="1039" />
     <option name="height" value="701" />
@@ -479,15 +467,15 @@
       <updated>1393176469747</updated>
       <workItem from="1393176509038" duration="1430000" />
       <workItem from="1393178016575" duration="7967000" />
-      <workItem from="1393204494194" duration="3886000" />
+      <workItem from="1393204494194" duration="4241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13283000" />
+    <option name="totallyTimeSpent" value="13638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="13" width="1039" height="701" extended-state="0" />
+    <frame x="158" y="13" width="1039" height="701" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -676,16 +664,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/chat.jade">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="327" selection-end="327" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="476">
+        <state line="12" column="9" selection-start="241" selection-end="241" vertical-scroll-proportion="0.53543305" vertical-offset="0" max-vertical-offset="391">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/views/chat.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="225" selection-end="225" vertical-scroll-proportion="0.4314721" vertical-offset="0" max-vertical-offset="394">
+        <state line="14" column="7" selection-start="409" selection-end="409" vertical-scroll-proportion="0.35501355" vertical-offset="107" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
