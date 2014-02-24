@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -26,14 +25,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
 }
+
+app.configure('production', function () {
+    app.use(express.errorHandler());
+});
+
 
 app.get('/', routes.index);
 app.get('/chat', chat.main);
 app.get('/users', user.list);
 
-var server = app.listen(app.get('port'), function(){
+var server = app.listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
 });
 var io = socketio.listen(server);
@@ -41,8 +45,8 @@ var io = socketio.listen(server);
 var clients = {};
 
 var socketsOfClients = {};
-io.sockets.on('connection', function(socket) {
-    socket.on('set username', function(userName) {
+io.sockets.on('connection', function (socket) {
+    socket.on('set username', function (userName) {
         // Is this an existing user name?
         if (clients[userName] === undefined) {
             // Does not exist ... so, proceed
@@ -50,14 +54,13 @@ io.sockets.on('connection', function(socket) {
             socketsOfClients[socket.id] = userName;
             userNameAvailable(socket.id, userName);
             userJoined(userName);
-        } else
-        if (clients[userName] === socket.id) {
+        } else if (clients[userName] === socket.id) {
             // Ignore for now
         } else {
             userNameAlreadyInUse(socket.id, userName);
         }
     });
-    socket.on('message', function(msg) {
+    socket.on('message', function (msg) {
         var srcUser;
         if (msg.inferSrcUser) {
             // Infer user name based on the socket id
@@ -80,7 +83,7 @@ io.sockets.on('connection', function(socket) {
                     "target": msg.target});
         }
     })
-    socket.on('disconnect', function() {
+    socket.on('disconnect', function () {
         var uName = socketsOfClients[socket.id];
         delete socketsOfClients[socket.id];
         delete clients[uName];
@@ -92,7 +95,7 @@ io.sockets.on('connection', function(socket) {
 })
 
 function userJoined(uName) {
-    Object.keys(socketsOfClients).forEach(function(sId) {
+    Object.keys(socketsOfClients).forEach(function (sId) {
         io.sockets.sockets[sId].emit('userJoined', { "userName": uName });
     })
 }
@@ -102,16 +105,16 @@ function userLeft(uName) {
 }
 
 function userNameAvailable(sId, uName) {
-    setTimeout(function() {
+    setTimeout(function () {
 
         console.log('Sending welcome msg to ' + uName + ' at ' + sId);
-        io.sockets.sockets[sId].emit('welcome', { "userName" : uName, "currentUsers": JSON.stringify(Object.keys(clients)) });
+        io.sockets.sockets[sId].emit('welcome', { "userName": uName, "currentUsers": JSON.stringify(Object.keys(clients)) });
 
     }, 500);
 }
 
 function userNameAlreadyInUse(sId, uName) {
-    setTimeout(function() {
-        io.sockets.sockets[sId].emit('error', { "userNameInUse" : true });
+    setTimeout(function () {
+        io.sockets.sockets[sId].emit('error', { "userNameInUse": true });
     }, 500);
 }
