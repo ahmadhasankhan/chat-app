@@ -6,7 +6,7 @@ var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var chat = require('./routes/chat');
-var socketio = require('socket.io')
+var socketio = require('socket.io');
 var http = require('http');
 var path = require('path');
 
