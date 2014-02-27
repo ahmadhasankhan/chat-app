@@ -7,6 +7,7 @@ function enableMsgInput(enable) {
 
 function enableUsernameField(enable) {
     $('input#userName').prop('disabled', !enable);
+    $('#go').prop('disabled', !enable);
 }
 
 function appendNewMessage(msg) {
@@ -30,6 +31,7 @@ function handleUserLeft(msg) {
     $("select#users option[value='" + msg.userName + "']").remove();
 }
 
+//socket = io.connect("http://localhost:3000");
 socket = io.connect("http://guarded-badlands-8572.herokuapp.com");
 
 function setFeedback(fb) {
@@ -95,6 +97,7 @@ $(function () {
 
     $('input#userName').change(setUsername);
     $('input#userName').keypress(function (e) {
+
         if (e.keyCode == 13) {
             checkUsername();
         }
@@ -107,7 +110,6 @@ $(function () {
     function checkUsername() {
         var username = $('input#userName').val();
         if (username.length > 0) {
-            alert("Username added");
             setUsername();
             e.stopPropagation();
             e.stopped = true;
