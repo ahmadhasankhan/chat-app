@@ -30,7 +30,7 @@ function handleUserLeft(msg) {
     $("select#users option[value='" + msg.userName + "']").remove();
 }
 
-socket = io.connect("http://localhost:3000");
+socket = io.connect("http://quiet-depths-7011.herokuapp.com/");
 
 function setFeedback(fb) {
     $('span#feedback').html(fb);
@@ -96,12 +96,27 @@ $(function () {
     $('input#userName').change(setUsername);
     $('input#userName').keypress(function (e) {
         if (e.keyCode == 13) {
+            checkUsername();
+        }
+    });
+
+    $('#go').click(function (e) {
+        checkUsername();
+    });
+
+    function checkUsername() {
+        var username = $('input#userName').val();
+        if (username.length > 0) {
+            alert("Username added");
             setUsername();
             e.stopPropagation();
             e.stopped = true;
             e.preventDefault();
+        } else {
+            alert("Please enter a username");
         }
-    });
+    }
+
 
     $('input#msg').keypress(function (e) {
         if (e.keyCode == 13) {
