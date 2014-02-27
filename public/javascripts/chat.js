@@ -30,7 +30,7 @@ function handleUserLeft(msg) {
     $("select#users option[value='" + msg.userName + "']").remove();
 }
 
-socket = io.connect("http://quiet-depths-7011.herokuapp.com");
+socket = io.connect("http://guarded-badlands-8572.herokuapp.com");
 
 function setFeedback(fb) {
     $('span#feedback').html(fb);
