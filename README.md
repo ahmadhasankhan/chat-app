@@ -13,7 +13,7 @@ Installation/Setup
 Browse it
 ======================
  Visit app on heroku
-http://guarded-badlands-8572.herokuapp.com/chat
+http://dreamchat.herokuapp.com/chat
  
  Browse to http://localhost:3000/chat. Start with entering a user name.
  Open multiple browser windows/tabs each with a different user name and chat away and see how the messages get relayed.

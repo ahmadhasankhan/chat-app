@@ -32,7 +32,7 @@ function handleUserLeft(msg) {
 }
 
 //socket = io.connect("http://localhost:3000");
-socket = io.connect("http://guarded-badlands-8572.herokuapp.com");
+socket = io.connect("http://dreamchat.herokuapp.com");
 
 function setFeedback(fb) {
     $('span#feedback').html(fb);
