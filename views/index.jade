@@ -1,8 +1,14 @@
 extends layout
 
+block append head
+    script(src="/javascripts/jquery/jquery-1.7.2.min.js")
+    script(src="/javascripts/main.js")
 block content
   h1= title
   p Welcome to #{title}
 
       h3  click here to
-          a(href='http://dreamchat.herokuapp.com/chat') Go to chat lobby
+          a(href='http://dreamchat.herokuapp.com/chat')<label> Go to chat lobby</label>
+    p This app was developed only for learning perpose, contents of this app might be taken from public domain.<br>
+  span.my_name A H Khan
+    a(href='https://github.com/ahmadhasankhan/chat-app')<br> Github Account

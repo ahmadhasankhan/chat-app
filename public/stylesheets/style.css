@@ -1,9 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+  background-color: white;
 }
 
 a {
   color: #00B7FF;
+   text-decoration: none;
+}
+.my_name {
+    color: red;
+    font-size: 20px;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
 }
