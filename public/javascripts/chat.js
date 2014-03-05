@@ -31,8 +31,8 @@ function handleUserLeft(msg) {
     $("select#users option[value='" + msg.userName + "']").remove();
 }
 
-//socket = io.connect("http://localhost:3000");
-socket = io.connect("http://dreamchat.herokuapp.com");
+socket = io.connect("http://localhost:3000");
+//socket = io.connect("http://dreamchat.herokuapp.com");
 
 function setFeedback(fb) {
     $('span#feedback').html(fb);
@@ -67,6 +67,34 @@ function setCurrentUsers(usersStr) {
     $('select#users').val('All').attr('selected', true);
 }
 
+function validateUserName(username) {
+    var regex = /^[0-9a-zA-Z]+.{2,9}$/;
+    username=username.toLowerCase();
+    if (username.capitalize() != "All") {
+        if (regex.test(username)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return false;
+}
+
+function callSetUsername() {
+    setUsername();
+    e.stopPropagation();
+    e.stopped = true;
+    e.preventDefault();
+}
+
+function userNameValidateFailed() {
+    setFeedback("<span style='color: red'> Username is not valid. Choose a valid name.</span>");
+}
+
+String.prototype.capitalize = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 $(function () {
     enableMsgInput(false);
 
@@ -95,29 +123,28 @@ $(function () {
         }
     });
 
-    $('input#userName').change(setUsername);
-    $('input#userName').keypress(function (e) {
+    //$('input#userName').change(setUsername);
 
+    $('input#userName').keypress(function (e) {
+        var username = $('input#userName').val();
         if (e.keyCode == 13) {
-            checkUsername();
+            if (validateUserName(username)) {
+                callSetUsername();
+            } else {
+                userNameValidateFailed();
+            }
+
         }
     });
 
     $('#go').click(function (e) {
-        checkUsername();
-    });
-
-    function checkUsername() {
         var username = $('input#userName').val();
-        if (username.length > 0) {
-            setUsername();
-            e.stopPropagation();
-            e.stopped = true;
-            e.preventDefault();
+        if (validateUserName(username)) {
+            callSetUsername();
         } else {
-            alert("Please enter a username");
+            userNameValidateFailed();
         }
-    }
+    });
 
 
     $('input#msg').keypress(function (e) {
