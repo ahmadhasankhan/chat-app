@@ -19,6 +19,8 @@ function appendNewMessage(msg) {
         html = "<span class='privMsg'>" + msg.source + " (P) : " + msg.message + "</span><br/>"
     }
     $('#msgWindow').append(html);
+    var ta = document.getElementById('msgWindow');
+    ta.scrollTop = ta.scrollHeight;
 }
 
 function appendNewUser(uName, notify) {
@@ -31,8 +33,8 @@ function handleUserLeft(msg) {
     $("select#users option[value='" + msg.userName + "']").remove();
 }
 
-//socket = io.connect("http://localhost:3000");
-socket = io.connect("http://dreamchat.herokuapp.com");
+socket = io.connect("http://localhost:3000");
+//socket = io.connect("http://dreamchat.herokuapp.com");
 
 function setFeedback(fb) {
     $('span#feedback').html(fb);
@@ -69,7 +71,7 @@ function setCurrentUsers(usersStr) {
 
 function validateUserName(username) {
     var regex = /^[0-9a-zA-Z]+.{2,9}$/;
-    username=username.toLowerCase();
+    username = username.toLowerCase();
     if (username.capitalize() != "All") {
         if (regex.test(username)) {
             return true;
@@ -148,11 +150,14 @@ $(function () {
 
 
     $('input#msg').keypress(function (e) {
+        var message= $('input#msg').val();
         if (e.keyCode == 13) {
-            sendMessage();
-            e.stopPropagation();
-            e.stopped = true;
-            e.preventDefault();
+            if (message.length != 0) {
+                sendMessage();
+                e.stopPropagation();
+                e.stopped = true;
+                e.preventDefault();
+            }
         }
     });
 });
